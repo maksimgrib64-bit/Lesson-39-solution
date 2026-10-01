@@ -6,8 +6,9 @@ bool check_number(long long number) {
 	if (number <0) {
 		number *= -1;
 	}
+	bool result = true;
 	if (number <= 9) {
-		return false;
+		result = false;
 	}
 
 	while (number > 9) {
@@ -16,11 +17,12 @@ bool check_number(long long number) {
 		int digit2 = number % 10;
 
 		if (digit1 != digit2) {
-			return false;
+			result = false;
+			break;
 		}
 	}
 
 
 
-	return true;
+	return result;
 }
