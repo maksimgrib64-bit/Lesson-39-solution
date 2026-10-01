@@ -1,6 +1,6 @@
 #include "test.h"
 void test(long long number, int expected, string test_name) {
-	bool actual = reverse(number);
+	int actual = reverse(number);
 	string msg = test_name + "-->";
 	msg += actual == expected ? "Pass" : "Fail";
 	cout << msg << endl;
